@@ -81,9 +81,9 @@ async function main() {
 			await censor('SUBVERSIVE MESSAGE CONTENT DETECTED. OUR LEADER IS PRETTIER.');
 		} else if (text.includes('equestria')) {
 			await censor('SUBVERSIVE MESSAGE CONTENT DETECTED.');
-		} else if (text.includes('fuck') && (text.includes('pony', text.indexOf('fuck')) || text.includes('ponie', text.indexOf('fuck')))) {
-			await censor('SUBVERSIVE MESSAGE CONTENT DETECTED.');
-		} else if (text.includes('main')) {
+		} else if (text.includes('fuck')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `BUCK`');
+		} else if (text.includes('main') || text.includes('hair')) {
 			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `MANE`');
 		} else if (text.includes('hands') || text.includes('feet') || text.includes('paws')) {
 			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `HOOVES`');
