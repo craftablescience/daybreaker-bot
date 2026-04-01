@@ -51,36 +51,44 @@ async function main() {
 		const censor = async (msg: string) => {
 			await message.reply({ content: `${msg}\n-# ORIGINAL MESSAGE: ||${text}||` });
 			await message.delete();
-			await message.member?.timeout(2000, "CENSORED");
+			await message.member?.timeout(3000, 'CENSORED');
 		};
 		if (text.includes('brony')) {
-			await censor('USE APPROVED FANDOM-CENTRIC LANGUAGE: \`MLP FAN\`');
-		} else if (text.includes('everyone') || text.includes('every0ne') || text.includes('everybody') || text.includes('everyb0dy') || text.includes('everybrony') || text.includes('everybr0ny')) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`EVERYPONY\`');
+			await censor('USE APPROVED FANDOM-CENTRIC LANGUAGE: `MLP FAN`');
+		} else if (text.includes('everyone') || text.includes('every0ne') || text.includes('everybody') || text.includes('everyb0dy') || text.includes('everybrony') || text.includes('everybr0ny') || text.includes('everycreature')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `EVERYPONY`');
+		} else if (text.includes('someone') || text.includes('some0ne') || text.includes('somebody') || text.includes('someb0dy') || text.includes('somebrony') || text.includes('somebr0ny') || text.includes('somecreature')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `SOMEPONY`');
+		} else if (text.includes('noone') || text.includes('no-one') || text.includes('nobody') || text.includes('no-body') || text.includes('nobrony') || text.includes('no-brony') || text.includes('nocreature') || text.includes('no-creature')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `NOPONY`');
+		} else if (text.includes('anyone') || text.includes('any0ne') || text.includes('anybody') || text.includes('anyb0dy') || text.includes('anybrony') || text.includes('anybr0ny') || text.includes('anycreature')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `ANYPONY`');
+		} else if (text.includes('people') || text.includes('humans') || text.includes('creatures')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `PONIES`');
+		} else if (text.includes('person') || text.includes('human') || text.includes('creature')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `PONY`');
 		} else if (text.includes('woman') || text.includes('w0man')) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`MARE\`');
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `MARE`');
 		} else if (text.includes('women') || text.includes('w0men')) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`MARES\`');
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `MARES`');
 		} else if (text.includes('man')) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`STALLION\`');
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `STALLION`');
 		} else if (text.includes(' men')) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`STALLIONS\`');
-		} else if (text.includes('people') || text.includes('humans')) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`PONIES\`');
-		} else if (text.includes('person') || text.includes('human')) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`PONY\`');
-		} else if (text.includes("changeling") || text.includes("dog") || text.includes("griffon") || text.includes("griffin") || text.includes("gryphon") || text.includes("griff")) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `STALLIONS`');
+		} else if (text.includes('changeling') || text.includes('dog') || text.includes('gryphon') || text.includes('griff')) {
 			await censor('SUBVERSIVE MESSAGE CONTENT DETECTED.');
-		} else if (text.includes("nightmare") || text.includes("moon") || text.includes("luna") || text.includes("celestia")) {
+		} else if (text.includes('nightmare') || text.includes('moon') || text.includes('luna') || text.includes('celestia')) {
 			await censor('SUBVERSIVE MESSAGE CONTENT DETECTED. OUR LEADER IS PRETTIER.');
 		} else if (text.includes('equestria')) {
 			await censor('SUBVERSIVE MESSAGE CONTENT DETECTED.');
-		} else if (text.includes("fuck") && (text.includes("pony", text.indexOf("fuck")) || text.includes("ponie", text.indexOf("fuck")))) {
+		} else if (text.includes('fuck') && (text.includes('pony', text.indexOf('fuck')) || text.includes('ponie', text.indexOf('fuck')))) {
 			await censor('SUBVERSIVE MESSAGE CONTENT DETECTED.');
-		} else if (text.includes("main")) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`MANE\`');
-		} else if (text.includes("hand") || text.includes("foot") || text.includes('feet') || text.includes("paw")) {
-			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: \`HOOF\`');
+		} else if (text.includes('main')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `MANE`');
+		} else if (text.includes('hands') || text.includes('feet') || text.includes('paws')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `HOOVES`');
+		} else if (text.includes('hand') || text.includes('foot') || text.includes('paw')) {
+			await censor('USE APPROVED PONY-CENTRIC LANGUAGE: `HOOF`');
 		}
 	});
 
