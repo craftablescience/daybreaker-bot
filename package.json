@@ -1,0 +1,44 @@
+{
+	"name": "daybreaker-bot",
+	"version": "1.0.0",
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"engineStrict": true,
+	"main": "build/main.js",
+	"scripts": {
+		"start": "node build/main.js",
+		"update-commands": "node build/main.js --update-commands",
+		"stop": "node build/main.js --stop",
+		"build": "tsc -p .",
+		"clean": "rm -rf build",
+		"lint": "eslint src --ext .ts --fix",
+		"dev": "tsc-watch --onSuccess \"node build/main.js\""
+	},
+	"author": "craftablescience",
+	"description": "April fools everypony",
+	"license": "MIT",
+	"homepage": "https://github.com/craftablescience/daybreaker-bot",
+	"bugs": {
+		"url": "https://github.com/craftablescience/daybreaker-bot/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/craftablescience/daybreaker-bot.git"
+	},
+	"dependencies": {
+		"console-stamp": "^3.1.2",
+		"discord-api-types": "^0.38.40",
+		"discord.js": "^14.25.1",
+		"node-fetch": "^2.6.7"
+	},
+	"devDependencies": {
+		"@types/node": "^25.3.0",
+		"@types/node-fetch": "^2.5.7",
+		"@typescript-eslint/eslint-plugin": "^8.55.0",
+		"@typescript-eslint/parser": "^8.55.0",
+		"eslint": "^9.39.2",
+		"tsc-watch": "^7.2.0",
+		"typescript": "^5.9.3"
+	}
+}
