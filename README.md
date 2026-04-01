@@ -1,4 +1,4 @@
-# Daybreaker
+# Daybreaker Discord Bot
 
 April Fools everypony.
 
